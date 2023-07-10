@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: #eaede8;
+    font-family: NotoSansBold, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.floating-button {
+    text-decoration: none;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 20px auto 0;
+    font-family: NotoSans, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: black;
+    background: white;
+    transition: .3s;
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+.floating-button:hover {
+    background: #6391FF;
+    box-shadow: 0 15px 20px rgb(46 119 229 / 40%);
+    color: white;
+    transform: translateY(-7px);
+}
+
+.zno-score-values {
+    width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #4e80bb;
+    background-color: #4e80bb;
+    color: #fff;
+}
+
+.zno-specialities {
+    width: 100%;
+    float: left;
+    padding-top: 30px;
+}
+
+.fieldWrap {
+    width: 300px;
+    float: left;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    height: 100px;
+}
+
+.fieldWrap label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.fieldWrap input {
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid black;
+    background:#eaede8;
+    width: 150px;
+    padding: 15px;
+    height: 40px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+}
+
+.fieldWrap input:focus {
+    border: 1px solid #4e80bb;
+    box-shadow: 0 0 4px 1px #ededed inset
+}
+
+h3 {
+    clear: both;
+    display: block;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: block;
+}
+
+.zno-search-field {
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #4e80bb;
+    padding: 18px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+}
+
+.gray-button {
+    font-size: 14px;
+}
+
+.zno-description {
+    font-family: NotoSans, sans-serif;
+    margin: 30px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.zno-alert {
+    font-family: NotoSans, sans-serif;
+    margin: 30px 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+    color: red;
+}
+
+.zno-error {
+    font-family: NotoSans, sans-serif;
+    display: none;
+    padding: 20px;
+    font-size: 14px;
+    background: #fab1a0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.zno-specialities-items {
+    font-family: NotoSans, sans-serif;
+    margin-top: 20px;
+}
+
+.zno-specialities-item-number {
+    float: left;
+    padding: 3px 5px;
+    border: 1px solid #000;
+    background: #4e80bb;
+    margin-right: 5px;
+    width: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+.zno-specialities-item-name {
+    width: 245px;
+    padding-top: 4px;
+    float: left;
+}
+
+.zno-specialities-item {
+    padding: 10px 0;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    width: 30%;
+    clear: both;
+    height: 100px;
+    font-size: 14px;
+}
+
+.zno-specialities-items .zno-specialities-item:last-child {
+    margin-right: 0;
+}
+
+.zno-small {
+    font-size: 12px;
+}
+
+.zno-specialities-item-score {
+    border-top: 1px dotted #ededed;
+    padding-top: 2px;
+    margin-top: 3px;
+}
+
+.bold-span {
+    font-weight: 800;
+}
+
+.score-negative {
+    color: red;
+}
+
+.score-positive {
+    color: green;
+}
+
+@media (max-width: 900px) {
+    .zno-score-values {
+        width: 100%;
+        text-align: center;
+    }
+
+    .fieldWrap {
+        display: block;
+        font-family: NotoSans, sans-serif;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        height: 100px;
+    }
+
+    .zno-specialities {
+        width: 100%;
+    }
+
+    .zno-specialities-items {
+        width: 100%;
+        margin: 0 10px;
+    }
+}

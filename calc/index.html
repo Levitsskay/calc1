@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<script async src="js/analytics.js"></script><script src="js/ff4e1bbcf9.js" crossorigin="anonymous"></script>
+<title>Розрахунок конкурсного бала</title>
+<link rel="stylesheet" id="app-css" href="css/main.css" type="text/css" media="all">
+
+</head>
+
+<body>
+<div class="container page-container">
+    <h1 class="big-title">Розрахунок конкурсного бала</h1>
+
+<form id="znoScoreForm">
+    <div class="zno-score-values">
+				
+        <div class="clear"></div>
+        <h2 class="default-title">Результати НМТ</h2>
+        <div class="clear"></div>
+		
+		<div class="fieldWrap">
+            <label for="ukr">Українська мова</label>
+            <input type="text" class="zno-input" name="ukr" id="ukr">
+        </div>
+        <div class="fieldWrap">
+            <label for="mat">Математика</label>
+            <input type="text" class="zno-input" name="mat" id="mat">
+        </div>
+		<div class="fieldWrap">
+            <label for="his">Історія України</label>
+            <input type="text" class="zno-input" name="his" id="his">
+        </div>
+        <div class="clear"></div>
+        <h2 class="default-title" style="margin-top:40px">Додаткові бали</h2>
+        <div class="fieldWrap">
+            <label for="fdp">Підготовчі курси</label>
+            <input type="text" class="fdp-input" name="fdp" id="fdp">
+			<p>Введіть бал з підготовчих курсів за 10-бальною шкалою</p>
+        </div>
+        <div class="clear"></div>
+        <div class="zno-error">
+            <div class="zno-error-title">При розрахунку були виявлені такі помилки:</div>
+            <div class="zno-error-body"></div>
+        </div>
+        <input type="submit" class="floating-button" value="Розрахувати!">
+    </div>
+    <div class="zno-specialities">
+        <h2 class="default-title">Фільтр спеціальностей</h2>
+        <input type="text" class="zno-search-field" id="specialitiesSearch" placeholder="Спеціальність">
+        <div class="zno-specialities-items">
+                            <div class="zno-specialities-item" data-number="015,39" id="item-015,39">
+                    <div class="zno-specialities-item-number" id="number-015,39">
+                        015.39                    </div>
+                    <div class="zno-specialities-item-name" id="name-015,39">
+                        Професійна освіта(цифрові технології)                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-015,39">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-015,39">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="015,33" id="item-015,33">
+                    <div class="zno-specialities-item-number" id="number-015,33">
+                        015.33                    </div>
+                    <div class="zno-specialities-item-name" id="name-015,33">
+                        Професійна освіта(цифрові технології)                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-015,33">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-015,33">-</span>
+                    </div>
+                </div>
+                             <div class="zno-specialities-item" data-number="051" id="item-051">
+                    <div class="zno-specialities-item-number" id="number-051">
+                        051                    </div>
+                    <div class="zno-specialities-item-name" id="name-051">
+                        Економіка                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-051">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-051">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="071" id="item-071">
+                    <div class="zno-specialities-item-number" id="number-071">
+                        071 </div>
+                    <div class="zno-specialities-item-name" id="name-071">
+                        Облік та оподаткування </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-071">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-071">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="072" id="item-072">
+                    <div class="zno-specialities-item-number" id="number-072">
+                        072 </div>
+                    <div class="zno-specialities-item-name" id="name-072">
+                        Фінанси, банківська справа та страхування </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-072">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-072">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="073" id="item-073">
+                    <div class="zno-specialities-item-number" id="number-073">
+                        073                    </div>
+                    <div class="zno-specialities-item-name" id="name-073">
+                        Менеджмент                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-073">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-073">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="076" id="item-076">
+                    <div class="zno-specialities-item-number" id="number-076">
+                        076 </div>
+                    <div class="zno-specialities-item-name" id="name-076">
+                        Підприєвмництво,торгівля та біржова діяльність </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-076">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-076">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="081" id="item-081">
+                    <div class="zno-specialities-item-number" id="number-081">
+                        081                    </div>
+                    <div class="zno-specialities-item-name" id="name-081">
+                        Право                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-081">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-081">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="101" id="item-101">
+                    <div class="zno-specialities-item-number" id="number-101">
+                        101                    </div>
+                    <div class="zno-specialities-item-name" id="name-101">
+                        Екологія                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-101">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-101">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="103" id="item-103">
+                    <div class="zno-specialities-item-number" id="number-103">
+                        103 </div>
+                    <div class="zno-specialities-item-name" id="name-103">
+                        Науки про землю </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-103">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-103">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="121" id="item-121">
+                    <div class="zno-specialities-item-number" id="number-121">
+                        121                    </div>
+                    <div class="zno-specialities-item-name" id="name-121">
+                        Інженерія програмного забезпечення                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-121">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-121">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="122" id="item-122">
+                    <div class="zno-specialities-item-number" id="number-122">
+                        122                    </div>
+                    <div class="zno-specialities-item-name" id="name-122">
+                        Комп’ютерні науки                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-122">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-122">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="123" id="item-123">
+                    <div class="zno-specialities-item-number" id="number-123">
+                        123                    </div>
+                    <div class="zno-specialities-item-name" id="name-123">
+                        Комп’ютерна інженерія                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-123">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-123">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="131" id="item-131">
+                    <div class="zno-specialities-item-number" id="number-131">
+                        131                    </div>
+                    <div class="zno-specialities-item-name" id="name-131">
+                        Прикладна механіка                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-131">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-131">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="133" id="item-133">
+                    <div class="zno-specialities-item-number" id="number-133">
+                        133                    </div>
+                    <div class="zno-specialities-item-name" id="name-133">
+                        Галузеве машинобудування                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-133">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-133">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="136" id="item-136">
+                    <div class="zno-specialities-item-number" id="number-136">
+                        136                    </div>
+                    <div class="zno-specialities-item-name" id="name-136">
+                        Металургія                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-136">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-136">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="141" id="item-141">
+                    <div class="zno-specialities-item-number" id="number-141">
+                        141                    </div>
+                    <div class="zno-specialities-item-name" id="name-141">
+                        Електроенергетика, електротехніка та електромеханіка                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-141">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-141">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="144" id="item-144">
+                    <div class="zno-specialities-item-number" id="number-144">
+                        144                    </div>
+                    <div class="zno-specialities-item-name" id="name-144">
+                        Теплоенергетика                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-144">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-144">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="151" id="item-151">
+                    <div class="zno-specialities-item-number" id="number-151">
+                        151                    </div>
+                    <div class="zno-specialities-item-name" id="name-151">
+                        Автоматизація та комп’ютерно-інтегровані технології                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-151">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-151">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="184" id="item-184">
+                    <div class="zno-specialities-item-number" id="number-184">
+                        184                    </div>
+                    <div class="zno-specialities-item-name" id="name-184">
+                        Гірництво                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-184">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-184">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="192" id="item-192">
+                    <div class="zno-specialities-item-number" id="number-192">
+                        192 </div>
+                    <div class="zno-specialities-item-name" id="name-192">
+                        Будівництво та цивільна інженерія </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-192">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-192">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="193" id="item-193">
+                    <div class="zno-specialities-item-number" id="number-193">
+                        193 </div>
+                    <div class="zno-specialities-item-name" id="name-193">
+                        Геодезія та землеустрій </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-193">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-193">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="263" id="item-263">
+                    <div class="zno-specialities-item-number" id="number-263">
+                        263 </div>
+                    <div class="zno-specialities-item-name" id="name-263">
+                        Цивільна безпека </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-263">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-263">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="274" id="item-274">
+                    <div class="zno-specialities-item-number" id="number-274">
+                        274 </div>
+                    <div class="zno-specialities-item-name" id="name-274">
+                        Автомобільний транспорт </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-274">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-274">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="275" id="item-275">
+                    <div class="zno-specialities-item-number" id="number-275">
+                        275 </div>
+                    <div class="zno-specialities-item-name" id="name-275">
+                        Транспортні технології(на автомобільному транспорті) </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-275">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-275">-</span>
+                    </div>
+                </div>
+                            <div class="zno-specialities-item" data-number="281" id="item-281">
+                    <div class="zno-specialities-item-number" id="number-281">
+                        281                    </div>
+                    <div class="zno-specialities-item-name" id="name-281">
+                        Публічне управління та адміністрування                    </div>
+                    <div class="clear"></div>
+                    <div class="zno-specialities-item-score zno-small">
+                        Ваш бал: <span class="bold-span" id="score-281">-</span>
+                    </div>
+                    <div class="zno-specialities-item-score-gal zno-small">
+                        Ваш бал з врахуванням галузевого коефіцієнта: <span class="bold-span" id="score-gal-281">-</span>
+                    </div>
+                </div>
+                        </div>
+    </div>
+</form>
+
+<div class="clear"></div>
+</div>
+
+<script type="text/javascript" src="js/Script" id="Script.js-js"></script>
+
+</body></html>
